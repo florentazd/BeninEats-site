@@ -67,7 +67,7 @@
         <div id="first-category-container" class="h-fit w-full sm:w-full max-w-full grid sm:grid-cols-3 gap-y-8 sm:gap-4">
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/pizza_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/pizza_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -101,7 +101,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/spaghetti.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/spaghetti.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -135,7 +135,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/spaghetti_2.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/spaghetti_2.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -169,7 +169,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/riz_blanc.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/riz_blanc.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -205,7 +205,7 @@
     <!-- Deuxie catégorie -->
     
     <div class="w-full h-fit flex flex-col gap-y-4">
-        <div id="resto-header-container" class="h-10 flex justify-between items-center">
+        <div  id="resto-header-container" class="h-10 flex justify-between items-center">
             <h3 id="header-title" class="text-xl text-[#182135] font-semibold flex items-center gap-1">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
@@ -218,15 +218,16 @@
         <div id="first-category-container" class="h-fit w-full sm:w-full max-w-full grid sm:grid-cols-3 gap-y-8 sm:gap-4">
 
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
-                <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/crevette_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                <!-- Image -->
+                <label for="product-view" class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl cursor-pointer">
+                    <img src="/images/crevette_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         <span class="text-xs font-semibold">30-45min</span>                          
                     </div>
-                </div>
+                </label>
                 <div class="w-full h-12 flex items-center justify-between">
                     <div class="flex flex-col">
                         <span class="text-xl sm:text-base font-semibold text-[#1F2937]">Crevettes</span>
@@ -253,7 +254,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/poulet_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/poulet_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -287,7 +288,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/attieke.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/attieke.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -321,7 +322,7 @@
             <!--  -->
             <div class="h-64 sm:h-56 w-full grid cursor-pointer">
                 <div class="w-full h-52 sm:h-44 relative overflow-hidden rounded-xl">
-                    <img src="/images/pizza_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl hover:scale-125 duration-700">
+                    <img src="/images/pizza_1.jpg" alt="" class="h-full w-full max-w-full max-h-full object-cover rounded-xl lg:hover:scale-125 lg:duration-700">
                     <div class="bg-[#fff] absolute top-2 left-2 h-8 w-fit rounded-xl flex items-center px-2 gap-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#202020" class="w-5 h-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -355,6 +356,7 @@
         </div>
     </div>
 </div>
+
 <style>
     .partner{
         display: grid;

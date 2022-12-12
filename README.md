@@ -15,6 +15,7 @@ Projet random de développement
 ![signup](/public/reset.png)
 ### Home
 ![signup](/public/home.png)
+![signup](/public/pview.png)
 
 ## Technos utilisés
 

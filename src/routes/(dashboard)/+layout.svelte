@@ -1,6 +1,8 @@
 <script>
 	import { page } from "$app/stores";
-
+  let product = {
+    number:0
+  }
 </script>
 
 <svelte:head>
@@ -138,7 +140,92 @@
       </div>
 </section>
 
+<!-- Affichage de la vue des repas -->
+<input type="checkbox" id="product-view" class="modal-toggle" />
+<div for="product-view" class="z-30 modal cursor-pointer modal-bottom sm:modal-middle ">
+  <div id="rbix"  class="p-0 cursor-default modal-box h-[60vh] lg:h-[600px] grid grid-rows-[100px,1fr,80px] sm:grid-rows-[208px,1fr,80px]">
+
+    <div class="hidden sm:block">
+      <img src="/images/attieke.jpg" class="sm:h-full sm:w-full object-cover" alt="">
+      <button class="h-[60px] w-[60px] absolute top-2 right-2 bg-white rounded-xl flex justify-center items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+        </svg>
+      </button>
+      <button class="h-[60px] w-[60px] absolute top-2 left-2 bg-[#c03a2bb8] text-white rounded-xl">
+        <label for="product-view" class="cursor-pointer h-full w-full  flex justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </label>
+      </button>
+    </div>
+    <div class="flex sm:hidden">
+      <!--  -->
+    </div>
+
+    <!-- Product details -->
+    <div id="product-details" class="font-sans sm:font-['Poppins'] bg-[#fff] hidden sm:flex sm:flex-col px-8 py-6 gap-y-2 pb-2">
+      <div class="flex justify-between">
+        <h3 class="font-bold text-[24px]">Attieke au Poisson</h3>
+        <div class="text-xs flex items-center justify-center gap-1">
+          <span class="text-sm relative top-[2px]">4.5</span> 
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#f6e58d">
+              <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
+          </svg>
+        </div>
+      </div>
+      <!--  -->
+      <p class="text-sm text-[#A4A4A4]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, accusamus.</p>
+      <!--  -->
+      <div class="flex justify-between ">
+        <div class="flex flex-row gap-x-1 items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A4A4A4" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>                                                           
+          <span class="text-sm text-[#A4A4A4]">30min</span>
+        </div>
+        <div class="flex flex-row gap-x-1 items-center">
+          <span class="text-md badge text-[#fff]">2000F</span>
+        </div>
+      </div>
+      <div class="h-full w-full  rounded-lg mt-3">
+        <textarea class="p-2 outline-none rounded-lg h-full w-full bg-[#F5F5F5] resize-none" placeholder="Ajouter un commentaire à la commande"/>
+      </div>
+    </div>
+    <div class="flex sm:hidden">
+      <!--  -->
+    </div>
+    <!--  -->
+    <div id="actions" class="grid grid-cols-[140px,1fr] gap-x-2 items-center px-4">
+      <div class="bg-[#F7F7F7] h-16 rounded-xl grid grid-cols-[32px,1fr,32px] px-2 items-center justify-between">
+        <button on:click={() => {
+          if(product.number - 1 >= 0)
+            product.number-=1
+        }}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+          </svg>
+        </button>
+        <span class="text-lg font-bold flex items-center justify-center">{product.number}</span>
+        <button on:click={() => (product.number+=1)}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+        </button>
+      </div>
+      <button class="btn h-16 normal-case bg-[#2f3640]">Ajouter au panier (0F)</button>
+    </div>
+  </div>
+</div>
+<!-- Fin d'affichage -->
+
 <style>
+  @media screen and (min-width: 960px){
+    #rbix{
+      width: 400px !important;
+    }
+  }
     .header-container{
         display: flex;
         align-items: center;
